@@ -1,16 +1,21 @@
 import React from 'react';
 import List from './list';
-
-
+import Form from './form';
+//hey teacher leave the kids alone
 export default class Board extends React.Component {
     render() {
-        const board = [];
-        for (let i = 0; i < 3; i++) {
-            board.push( <List/> );
+        let board = [];
+        for (let i = 0; i < 3; i ++) {
+            board.push(<List/>);
         }
-        return ( < div className = "board" >
-                       {board}
-                       < /div>);
+        return (
+            <div className = "board">
+               <Form />
+               {board} {this.props.lists}
+
+           </div>
+
+        );
     }
 }
 

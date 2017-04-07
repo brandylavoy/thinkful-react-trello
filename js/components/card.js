@@ -1,10 +1,18 @@
 import React from 'react';
 
-export default function Card() {
-    const cardDetail = 'This is a card';
-    return (
-        <div className="Card">
-        <div className="card-detail">{cardDetail}</div>
-        </div>
-    );
+
+export default class Card extends React.Component{
+    render () {
+        return (
+            <div className="card">
+                This is a Card {this.props.cardText}
+            </div>
+
+//        <div className="cardDetails">
+//
+//            </div>
+        );
+    }
 }
+
+
